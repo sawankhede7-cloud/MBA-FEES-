@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MBA Fees 2026-27 | College Dhundo Indore</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b0f1a;
+    --card: #111827;
+    --border: #1e2d45;
+    --accent: #f59e0b;
+    --accent2: #3b82f6;
+    --scholar: #10b981;
+    --text: #e2e8f0;
+    --muted: #64748b;
+    --row-hover: #1a2540;
+    --pill-bg: #1e2d45;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    background-image: radial-gradient(ellipse at 20% 20%, #1a2a4a44 0%, transparent 60%),
+                      radial-gradient(ellipse at 80% 80%, #1a1a3a44 0%, transparent 60%);
+  }
+
+  /* ── HEADER ── */
+  .hero {
+    background: linear-gradient(135deg, #0f1c3f 0%, #0b0f1a 60%, #1a0b2e 100%);
+    border-bottom: 2px solid var(--accent);
+    padding: 36px 24px 28px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 30px,
+      rgba(245,158,11,0.03) 30px,
+      rgba(245,158,11,0.03) 31px
+    );
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #000;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: clamp(28px, 6vw, 52px);
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    color: #fff;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero-sub {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .contact-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 22px;
+  }
+  .contact-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    backdrop-filter: blur(8px);
+  }
+  .contact-card .name {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+  }
+  .contact-card .num {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+
+  .address-bar {
+    margin-top: 16px;
+    font-size: 12.5px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .address-bar::before { content: '📍'; font-size: 13px; }
+
+  /* ── SEARCH ── */
+  .controls {
+    max-width: 1100px;
+    margin: 28px auto 0;
+    padding: 0 20px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .search-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 220px;
+  }
+  .search-wrap::before {
+    content: '🔍';
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    pointer-events: none;
+  }
+  .search-wrap input {
+    width: 100%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 11px 14px 11px 40px;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .search-wrap input:focus { border-color: var(--accent); }
+  .search-wrap input::placeholder { color: var(--muted); }
+
+  .stats-strip {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .stat-chip {
+    background: var(--pill-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 13px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .stat-chip strong { color: var(--accent); }
+
+  /* ── LEGEND ── */
+  .legend {
+    max-width: 1100px;
+    margin: 16px auto 0;
+    padding: 0 20px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .legend-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── TABLE WRAPPER ── */
+  .table-wrap {
+    max-width: 1100px;
+    margin: 20px auto 40px;
+    padding: 0 20px;
+  }
+  .table-container {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+
+  /* ── HEADER ROW ── */
+  thead tr {
+    background: linear-gradient(90deg, #0f1c3f, #1a1040);
+    border-bottom: 2px solid var(--accent);
+  }
+  thead th {
+    padding: 14px 12px;
+    text-align: left;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  thead th:first-child { padding-left: 18px; width: 44px; }
+
+  /* ── BODY ROWS ── */
+  tbody tr {
+    border-bottom: 1px solid rgba(30,45,69,0.6);
+    transition: background 0.15s;
+  }
+  tbody tr:hover { background: var(--row-hover); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr.hidden { display: none; }
+
+  tbody td {
+    padding: 13px 12px;
+    vertical-align: middle;
+  }
+  tbody td:first-child {
+    padding-left: 18px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .college-name {
+    font-weight: 500;
+    color: #fff;
+    font-size: 13.5px;
+  }
+
+  /* Fee badge styles */
+  .fee {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .fee-scholar {
+    background: rgba(16,185,129,0.15);
+    color: #34d399;
+    border: 1px solid rgba(16,185,129,0.25);
+  }
+  .fee-paid {
+    background: rgba(59,130,246,0.12);
+    color: #93c5fd;
+    border: 1px solid rgba(59,130,246,0.2);
+  }
+  .fee-high {
+    background: rgba(239,68,68,0.12);
+    color: #fca5a5;
+    border: 1px solid rgba(239,68,68,0.2);
+  }
+  .fee-mixed {
+    background: rgba(245,158,11,0.12);
+    color: #fcd34d;
+    border: 1px solid rgba(245,158,11,0.2);
+  }
+
+  .reg-fee {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  .bus-chip {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 5px;
+    font-size: 12px;
+    background: var(--pill-bg);
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  .bus-free { background: rgba(16,185,129,0.1); color: #34d399; border-color: rgba(16,185,129,0.2); }
+  .bus-na { color: #475569; background: transparent; border-color: transparent; }
+
+  /* ── NO RESULTS ── */
+  .no-results {
+    text-align: center;
+    padding: 40px;
+    color: var(--muted);
+    font-size: 14px;
+    display: none;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    padding: 28px 20px;
+    border-top: 1px solid var(--border);
+    background: var(--card);
+    font-size: 13px;
+    color: var(--muted);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .footer strong { color: var(--accent); }
+
+  @media (max-width: 700px) {
+    thead th:nth-child(3),
+    tbody td:nth-child(3) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO HEADER -->
+<div class="hero">
+  <div class="hero-badge">✦ Annual Fee Guide ✦</div>
+  <h1>MBA Fees <span>2026–27</span></h1>
+  <p class="hero-sub">Approximate Annual Fees — All Indore MBA Colleges</p>
+
+  <div class="contact-bar">
+    <div class="contact-card">
+      <span class="name">Rahul Sahu Sir</span>
+      <span class="num">9669626663 &nbsp;|&nbsp; 9165937938</span>
+    </div>
+    <div class="contact-card">
+      <span class="name">Manish Sahu Sir</span>
+      <span class="num">9806505441 &nbsp;|&nbsp; 9669669023</span>
+    </div>
+  </div>
+
+  <div class="address-bar">
+    College Dhundo 216, Shri Krishna Divine Mall, Marimata Square, Indore
+  </div>
+</div>
+
+<!-- CONTROLS -->
+<div class="controls">
+  <div class="search-wrap">
+    <input type="text" id="searchBox" placeholder="Search college name…" oninput="filterTable()">
+  </div>
+  <div class="stats-strip">
+    <div class="stat-chip">Total Colleges: <strong>45</strong></div>
+    <div class="stat-chip" id="visibleCount">Showing: <strong>45</strong></div>
+  </div>
+</div>
+
+<!-- LEGEND -->
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#34d399"></div> Full Scholar</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#93c5fd"></div> Paid Fee (Low–Mid)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#fca5a5"></div> Paid Fee (High)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#fcd34d"></div> Scholar + Difference</div>
+</div>
+
+<!-- TABLE -->
+<div class="table-wrap">
+  <div class="table-container">
+    <table id="feeTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>College Name</th>
+          <th>Reg. Fee</th>
+          <th>OBC</th>
+          <th>SC / ST</th>
+          <th>General</th>
+          <th>Bus</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    <div class="no-results" id="noResults">No colleges found matching your search.</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  📞 Get More Details — Call Now &nbsp;<strong>9669626663</strong> &nbsp;|&nbsp; <strong>9806505441</strong><br>
+  <span style="font-size:12px;margin-top:6px;display:block;">College Dhundo 216, Shri Krishna Divine Mall, Marimata Square, Indore</span>
+</div>
+
+<script>
+const data = [
+  { name: "Chamelidevi College",    reg: "3600",        obc: "65,000",             scst: "65,000",             gen: "65,000",    bus: "Free" },
+  { name: "Shivajirao Kadam",       reg: "2000",        obc: "60,000",             scst: "60,000",             gen: "60,000",    bus: "Free" },
+  { name: "IMI College",            reg: "2000",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "35,000",    bus: "Optional – 10,000" },
+  { name: "Astral College",         reg: "2000",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "35,000",    bus: "Optional – 10,000" },
+  { name: "Shree College",          reg: "1600",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "35,000",    bus: "Not Applicable" },
+  { name: "IIST College",           reg: "1550",        obc: "1,20,000",           scst: "1,20,000",           gen: "1,20,000",  bus: "Optional" },
+  { name: "Maharshi College",       reg: "2000",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "35,000",    bus: "Not Applicable" },
+  { name: "Indore International",   reg: "2000",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "35,000",    bus: "Optional – 10,000" },
+  { name: "Oxford College",         reg: "1600",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "35,000",    bus: "Optional" },
+  { name: "Sage University",        reg: "1800",        obc: "Scholar+Diff.",      scst: "Scholar+Diff.",      gen: "1,10,000",  bus: "18,000" },
+  { name: "Renaissance University", reg: "350",         obc: "1,00,000",           scst: "15,000+Scholar",     gen: "1,00,000",  bus: "15,000" },
+  { name: "Avantika University",    reg: "1600",        obc: "2,80,000",           scst: "2,80,000",           gen: "2,80,000",  bus: "Free" },
+  { name: "Parul University",       reg: "2000",        obc: "2,25,000",           scst: "2,25,000",           gen: "2,25,000",  bus: "Optional" },
+  { name: "Oriental University",    reg: "2500",        obc: "5,000+Scholar",      scst: "Full Scholar",       gen: "45,000",    bus: "Optional" },
+  { name: "Vikrant University",     reg: "2000",        obc: "Scholar+Diff.",      scst: "Full Scholar",       gen: "40,000",    bus: "Optional – 12,000" },
+  { name: "BM College",             reg: "2000",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "30,000",    bus: "Not Applicable" },
+  { name: "ISBA College",           reg: "2000",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "40,000",    bus: "20,000 Optional" },
+  { name: "GSB College",            reg: "2000",        obc: "1,06,000",           scst: "1,06,000",           gen: "1,06,000",  bus: "Optional" },
+  { name: "GSIMR College",          reg: "1000",        obc: "73,500",             scst: "73,500",             gen: "73,500",    bus: "Optional" },
+  { name: "Arihant College",        reg: "2000",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "40,000",    bus: "Not Applicable" },
+  { name: "Mathuradevi College",    reg: "2000",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "30,000",    bus: "Not Applicable" },
+  { name: "Idylic College",         reg: "1500+9900",   obc: "1,00,000",           scst: "1,00,000",           gen: "1,00,000",  bus: "15,000" },
+  { name: "MIT College",            reg: "2000",        obc: "40,000",             scst: "40,000",             gen: "40,000",    bus: "Optional – 10,000" },
+  { name: "LNCT College",           reg: "2000",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "35,000",    bus: "Not Applicable" },
+  { name: "Aurvindo College",       reg: "2000",        obc: "45,000",             scst: "45,000",             gen: "45,000",    bus: "Not Applicable" },
+  { name: "Indore Mahavidhyalye",   reg: "1600",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "30,000",    bus: "Optional – 10,000" },
+  { name: "Jain Diwakar College",   reg: "1600",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "40,000",    bus: "Optional" },
+  { name: "IPS College Sanwer",     reg: "2000",        obc: "85,000",             scst: "85,000",             gen: "85,000",    bus: "Optional" },
+  { name: "Artimisia College",      reg: "1600",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "30,000",    bus: "Optional" },
+  { name: "Gurukul College",        reg: "1600",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "30,000",    bus: "Not Applicable" },
+  { name: "Asian College",          reg: "16000",       obc: "Full Scholar",       scst: "Full Scholar",       gen: "30,000",    bus: "Optional" },
+  { name: "Sanghvi College",        reg: "1600",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "30,000",    bus: "Optional" },
+  { name: "Aisect College",         reg: "2000",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "35,000",    bus: "Optional" },
+  { name: "Vikrant College",        reg: "2000",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "35,000",    bus: "Optional" },
+  { name: "Softvision College",     reg: "1600",        obc: "1,17,500",           scst: "1,17,500",           gen: "1,17,500",  bus: "20,000 Optional" },
+  { name: "Madhuban College",       reg: "1600",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "35,000",    bus: "Optional" },
+  { name: "Lal Bahadur Shastri",    reg: "2000",        obc: "35,000",             scst: "35,000",             gen: "35,000",    bus: "Not Applicable" },
+  { name: "Kewal Shree College",    reg: "1600",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "30,000",    bus: "Not Applicable" },
+  { name: "KK College",             reg: "2000",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "30,000",    bus: "Optional" },
+  { name: "Patel College",          reg: "1600",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "30,000",    bus: "Optional" },
+  { name: "Parijaat College",       reg: "1600",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "30,000",    bus: "Optional" },
+  { name: "Vishisht College",       reg: "2000",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "40,000",    bus: "Optional" },
+  { name: "Swami Vivekananda",      reg: "2000",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "40,000",    bus: "Optional" },
+  { name: "Indra College",          reg: "1600",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "30,000",    bus: "Optional" },
+  { name: "Apex College",           reg: "1600",        obc: "Full Scholar",       scst: "Full Scholar",       gen: "30,000",    bus: "Optional" },
+];
+
+function feeBadge(val) {
+  const v = val.toLowerCase();
+  if (v.includes('full scholar')) return `<span class="fee fee-scholar">${val}</span>`;
+  if (v.includes('scholar+diff') || v.includes('scholar + diff') || v.includes('15,000+scholar') || v.includes('5,000+scholar'))
+    return `<span class="fee fee-mixed">${val}</span>`;
+  const num = parseInt(val.replace(/[^0-9]/g,''));
+  if (num >= 100000) return `<span class="fee fee-high">${val}</span>`;
+  return `<span class="fee fee-paid">${val}</span>`;
+}
+
+function busBadge(val) {
+  const v = val.toLowerCase();
+  if (v === 'free') return `<span class="bus-chip bus-free">Free</span>`;
+  if (v === 'not applicable') return `<span class="bus-chip bus-na">N/A</span>`;
+  return `<span class="bus-chip">${val}</span>`;
+}
+
+const tbody = document.getElementById('tableBody');
+data.forEach((r, i) => {
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td>${i+1}</td>
+    <td class="college-name">${r.name}</td>
+    <td class="reg-fee">₹${r.reg}</td>
+    <td>${feeBadge(r.obc)}</td>
+    <td>${feeBadge(r.scst)}</td>
+    <td>${feeBadge(r.gen)}</td>
+    <td>${busBadge(r.bus)}</td>
+  `;
+  tbody.appendChild(tr);
+});
+
+function filterTable() {
+  const q = document.getElementById('searchBox').value.toLowerCase();
+  const rows = tbody.querySelectorAll('tr');
+  let visible = 0;
+  rows.forEach(row => {
+    const name = row.querySelector('.college-name')?.textContent.toLowerCase() || '';
+    const match = name.includes(q);
+    row.classList.toggle('hidden', !match);
+    if (match) visible++;
+  });
+  document.getElementById('visibleCount').innerHTML = `Showing: <strong>${visible}</strong>`;
+  document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+}
+</script>
+</body>
+</html>
+
